@@ -1,6 +1,7 @@
 import numpy as np
 import os
 
+
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 from flask_wtf import FlaskForm

@@ -3,30 +3,121 @@
     <link async href="http://fonts.googleapis.com/css?family=Acme" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
     <head>
         <style>
+            body {
+                background-image: url("/static/pexels-lukas-616401.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            img {
+                width: 350px;
+                height: 350px;
+            }
+            table, th, td {
+                border: 0px solid black;
+            }
+            th, td {
+                padding: 10px;
+            }
+            th {
+                text-align: left;
+            }
+            table.center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table.result {
+                border: 1px solid black;
+                background-color: rgb(127, 127, 127);
+                opacity: 80%;
+            }
         </style>
     </head>
     <body>
-        <title>Is This A Cat APP</title>
+        <title>Food Recognition APP</title>
+        <!--First section-->
+
+
         <div id="app">
-            <div class="left-panel">
+            
                 <div class="header">
-                    <h1>Is This A Cat?</h1>
+                    <br><br><br><br><br><br>
+                    <h1 style="text-align:center;">Food Recognition</h1>
                 </div>
 
-                <div class="upload-section-title">
-                    <h2>Please choose an image file to submit:</h2>
-                </div>
+                <table class="center">
+                    <th>
+                        <div class="upload-section-title">
+                            <h2>Please choose an image file to submit:</h2>
+                        </div>
+                        <div class="upload-section">
+                            <form method=post enctype=multipart/form-data action=" {{ url_for('prediction') }} ">
+                                {# This hidden_tag is a CSRF security feature. #}
+                                {{ form.hidden_tag() }}
+                                <input id="filename" type="hidden" name="filename" value="12345" />
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <input id="uploadImage" type=file name=photo label="Choose file to upload" onchange="PreviewImage()">
+                                        </th>
+                                        <th>
+                                            <input id="showPrediction" type=submit value="Get Prediction" style="display: none;"> 
+                                        </th>
+                                    </tr>
+                                </table>
+                                
+                                
+                                <br>
+                                {% if filename %}
+                                    <img id="uploadPreview" src="{{ url_for('static', filename=filename) }}">
+                                {% else %}
+                                    <img id="uploadPreview">
+                                {% endif %}
+                                <script type="text/javascript">
+                                    function PreviewImage() {
+                                        var oFReader = new FileReader();
+                                        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
 
-                <div class="upload-section">
-                    <form method=post enctype=multipart/form-data action=" {{ url_for('prediction') }} ">
-                        {# This hidden_tag is a CSRF security feature. #}
-                        {{ form.hidden_tag() }}
-                        <input type=file name=photo label="Choose file to upload">
-                        <input type=submit value="Get Prediction">
-                    </form>
-                </div>
-            </div>
-            <div class="right-panel"></div>
+                                        oFReader.onload = function (oFREvent) {
+                                            document.getElementById("uploadPreview").src = oFREvent.target.result;
+                                        };
+                                        document.getElementById("filename").value =document.getElementById("uploadImage").files.item(0).name;
+                                        var name = document.getElementById("uploadImage");
+
+                                        document.getElementById("showPrediction").style.display = "block";
+                                    };
+                                    
+                                </script>
+                            </form>
+                            <p> filename: {{filename}}</p>
+                        </div>
+                        
+                    </th>
+                    
+                    <th>
+
+                        <div class="results">
+                            {% if filename %}
+                            <h2 style="text-align: center;">Results</h2>
+                            <table class="result">
+                                <tr>
+                                    <th>Food</th>
+                                    <th>Prediction</th> 
+                                </tr>
+                                {% for lab,score in results %}
+                                <tr>
+                                    <th>{{lab}}</th>
+                                    <th>{{'%0.2f' % (score*100)}}%</th> 
+                                </tr>
+                                {% endfor %}
+                            </table>
+                            {% endif %}
+                        </div>
+
+                    </th>                
+                </table>
+                
+
         </div>
     </body>
 </html>

@@ -65,7 +65,7 @@ def prediction():
 def return_prediction(filename):
     input_image_matrix = _image_process(filename)
     score = cnn_model.predict(input_image_matrix)
-    class_index = cnn_model.predict_classes(input_image_matrix, batch_size=1)
+    ##class_index = cnn_model.predict_classes(input_image_matrix, batch_size=1)
     n=10
     top_n = score[0].argsort()[::-1][:n]
     percentage =np.sort(score[0])[::-1]

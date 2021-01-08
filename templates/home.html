@@ -28,7 +28,7 @@
             }
             table.result {
                 border: 1px solid black;
-                background-color: rgb(150, 150, 150);
+                background-color: rgb(127, 127, 127);
                 opacity: 80%;
             }
         </style>
@@ -61,7 +61,7 @@
                                             <input id="uploadImage" type=file name=photo label="Choose file to upload" onchange="PreviewImage()">
                                         </th>
                                         <th>
-                                            <input id="showPrediction" type=submit value="Get Prediction" style="display: none;" onclick="ShowResuts()"> 
+                                            <input id="showPrediction" type=submit value="Get Prediction" style="display: none;"> 
                                         </th>
                                     </tr>
                                 </table>
@@ -85,12 +85,7 @@
                                         var name = document.getElementById("uploadImage");
 
                                         document.getElementById("showPrediction").style.display = "block";
-                                        document.getElementById("showResult").style.display = "none"
                                     };
-
-                                    function ShowResults() {
-                                        document.getElementById("showResult").style.display = "block";
-                                    }
                                     
                                 </script>
                             </form>
@@ -101,13 +96,13 @@
                     
                     <th>
 
-                        <div class="results" id="showResult">
+                        <div class="results">
                             {% if filename %}
                             <h2 style="text-align: center;">Results</h2>
                             <table class="result">
                                 <tr>
-                                    <th><b>Food</b></th>
-                                    <th></b>Prediction</b></th> 
+                                    <th>Food</th>
+                                    <th>Prediction</th> 
                                 </tr>
                                 {% for lab,score in results %}
                                 <tr>

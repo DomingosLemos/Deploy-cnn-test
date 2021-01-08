@@ -128,3 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 best_model_3class_final.hdf5
+DLNN_v01.ipynb

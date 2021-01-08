@@ -70,7 +70,6 @@ def return_prediction(filename):
     top_n = score[0].argsort()[::-1][:n]
     percentage =np.sort(score[0])[::-1]
     labs = []
-    perc = []
     for i in range(n):
         labs.append(CLASS_INDICES[top_n[i]])
 

@@ -23,7 +23,9 @@ configure_uploads(app, photos)
 patch_request_class(app)  # set maximum file size, default is 16MB
 
 # Load the model:
-cnn_model = load_model('best_model_3class_final.h5')
+#cnn_model = load_model('food_baseline_model_12.h5')
+cnn_model = load_model('best_model_3class.hdf')
+
 CLASS_INDICES = ['apple_pie', 'baby_back_ribs', 'baklava', 'beef_carpaccio', 'beef_tartare', 'beet_salad', 'beignets', 'bibimbap',
        'bread_pudding', 'breakfast_burrito', 'bruschetta', 'caesar_salad', 'cannoli', 'caprese_salad', 'carrot_cake',
        'ceviche', 'cheese_plate', 'cheesecake', 'chicken_curry', 'chicken_quesadilla', 'chicken_wings', 'chocolate_cake',
@@ -77,7 +79,7 @@ def return_prediction(filename):
 
 
 def _image_process(filename):
-    img = image.load_img('static/' + filename, target_size=(64, 64))
+    img = image.load_img('static/' + filename, target_size=(299, 299))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     input_matrix = np.vstack([x])

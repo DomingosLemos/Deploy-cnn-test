@@ -111,8 +111,10 @@
                                 </tr>
                                 {% for lab,score in results %}
                                 <tr>
-                                    <th>{{lab}}</th>
-                                    <th>{{'%0.2f' % (score*100)}}%</th> 
+                                    {% if score> 0.01 %}
+                                        <th>{{lab}}</th>
+                                        <th>{{'%0.2f' % (score*100)}}%</th> 
+                                    {% endif %}
                                 </tr>
                                 {% endfor %}
                             </table>

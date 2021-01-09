@@ -130,3 +130,8 @@ dmypy.json
 best_model_3class_final.hdf5
 DLNN_v01.ipynb
 runtime.txt
+best_model_3class.hdf
+food_baseline_model.h5
+food_baseline_model.hdf
+food_baseline_model.hdf
+*.h5

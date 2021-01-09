@@ -126,32 +126,32 @@ Having the model defined and deployed, there are some aspects that can have furt
 ## References
 
 *Dataset*
-1. https://www.kaggle.com/kmader/food41
+* https://www.kaggle.com/kmader/food41
 
 *Baseline Model*
-2. https://stats.stackexchange.com/questions/164876/what-is-the-trade-off-between-batch-size-and-number-of-iterations-to-train-a-neu#:~:text=In%20general%2C%20batch%20size%20of,best%20to%20start%20experimenting%20with
-3. https://ruder.io/optimizing-gradient-descent/
-4. https://keras.io/api/optimizers/rmsprop/
-5. https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/
-6. https://machinelearningmastery.com/dropout-regularization-deep-learning-models-keras/
-7. https://stackoverflow.com/questions/43237124/what-is-the-role-of-flatten-in-keras
-8. https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c
-9. https://stackoverflow.com/questions/49922252/choosing-number-of-steps-per-epoch#:~:text=Traditionally%2C%20the%20steps%20per%20epoch,by%202%20or%203%20etc
-10. https://stats.stackexchange.com/questions/164876/what-is-the-trade-off-between-batch-size-and-number-of-iterations-to-train-a-neu#:~:text=In%20general%2C%20batch%20size%20of,best%20to%20start%20experimenting%20with
+* https://stats.stackexchange.com/questions/164876/what-is-the-trade-off-between-batch-size-and-number-of-iterations-to-train-a-neu#:~:text=In%20general%2C%20batch%20size%20of,best%20to%20start%20experimenting%20with
+* https://ruder.io/optimizing-gradient-descent/
+* https://keras.io/api/optimizers/rmsprop/
+* https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/
+* https://machinelearningmastery.com/dropout-regularization-deep-learning-models-keras/
+* https://stackoverflow.com/questions/43237124/what-is-the-role-of-flatten-in-keras
+* https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c
+* https://stackoverflow.com/questions/49922252/choosing-number-of-steps-per-epoch#:~:text=Traditionally%2C%20the%20steps%20per%20epoch,by%202%20or%203%20etc
+* https://stats.stackexchange.com/questions/164876/what-is-the-trade-off-between-batch-size-and-number-of-iterations-to-train-a-neu#:~:text=In%20general%2C%20batch%20size%20of,best%20to%20start%20experimenting%20with
 
 *Pre-trained models*
-11. https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/
-12. https://www.kaggle.com/theimgclist/multiclass-food-classification-using-tensorflow
-13. https://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/
+* https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/
+* https://www.kaggle.com/theimgclist/multiclass-food-classification-using-tensorflow
+* https://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/
 
 *Deployment*
-14. https://www.youtube.com/watch?v=vGphzPLemZE
-15. https://tecadmin.net/install-python-3-7-on-centos-8/
-16. https://dashboard.ngrok.com/get-started/setup
-17. https://medium.com/bhavaniravi/build-your-1st-python-web-app-with-flask-b039d11f101c
-18. https://medium.com/techkylabs/getting-started-with-python-flask-framework-part-1-a4931ce0ea13
-19. https://github.com/MafSV20180073/deploying-cnn-model
-20. https://apoie.me/cursoemvideo
-21. https://www.pyimagesearch.com/2019/06/24/change-input-shape-dimensions-for-fine-tuning-with-keras/
+* https://www.youtube.com/watch?v=vGphzPLemZE
+* https://tecadmin.net/install-python-3-7-on-centos-8/
+* https://dashboard.ngrok.com/get-started/setup
+* https://medium.com/bhavaniravi/build-your-1st-python-web-app-with-flask-b039d11f101c
+* https://medium.com/techkylabs/getting-started-with-python-flask-framework-part-1-a4931ce0ea13
+* https://github.com/MafSV20180073/deploying-cnn-model
+* https://apoie.me/cursoemvideo
+* https://www.pyimagesearch.com/2019/06/24/change-input-shape-dimensions-for-fine-tuning-with-keras/
 
 

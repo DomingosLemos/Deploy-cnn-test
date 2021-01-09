@@ -47,12 +47,12 @@ class UploadForm(FlaskForm):
     photo = FileField(validators=[FileAllowed(photos, 'Image Only!'), FileRequired('Choose a file to upload!')])
     submit = SubmitField('Get Prediction')
 
-
+# Form entry
 @app.route('/', methods=['GET'])
 def index():
     return render_template('home.html', form=UploadForm(), results={}, filename="")
 
-
+#Form used after the first submit
 @app.route('/prediction/', methods=['POST'])
 def prediction():
     # Saving file to folder
@@ -68,7 +68,9 @@ def return_prediction(filename):
     input_image_matrix = _image_process(filename)
     score = cnn_model.predict(input_image_matrix)
     ##class_index = cnn_model.predict_classes(input_image_matrix, batch_size=1)
+    #n = maximum top of predicted elements
     n=10
+    #sort by categories with higher percentage
     top_n = score[0].argsort()[::-1][:n]
     percentage =np.sort(score[0])[::-1]
     labs = []

@@ -87,7 +87,7 @@ A small python app was made in Visual Studio Code, based on the example given in
 The Flask library is the one that allowed the creation of a web app with python. 
 The application structure is in the following image
 
-![alt text](https://github.com/DomingosLemos/Deploy-cnn-test/blob/main/static/struct_code.png)
+![alt text](https://github.com/DomingosLemos/Deploy-cnn-test/blob/main/static/Struct_code.png)
 
 Project structure:
 *	app.py is the main application code block
